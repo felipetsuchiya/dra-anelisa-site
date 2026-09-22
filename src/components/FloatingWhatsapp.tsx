@@ -1,4 +1,4 @@
-import { MessageCircle, Phone } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { whatsappLink } from "../common/whatsappmessage";
 
 export function FloatingWhatsApp() {
