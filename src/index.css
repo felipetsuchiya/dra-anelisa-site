@@ -1,0 +1,53 @@
+/* src/index.css */
+@import "tailwindcss";
+
+@theme {
+  /* Pristine Light Mode & Deep Dark Mode Accent */
+  --color-canvas: #F7F6F3;
+  --color-surface: #FFFFFF;
+  --color-brownish: #887166;
+  --color-ink: #111111;
+  --color-ink-muted: #787774;
+  --color-border: rgba(0, 0, 0, 0.06);
+  --color-accent: #E3D9C9; /* Silk Nude para detalhes subtis */
+
+  /* Tipografia Editorial Premium */
+  --font-sans: "SF Pro Display", "Geist Sans", "Helvetica Neue", sans-serif;
+  --font-serif: "Newsreader", "Playfair Display", "Instrument Serif", serif;
+  --font-mono: "Geist Mono", "JetBrains Mono", monospace;
+
+  /* Animação do Ticker (Marquee) */
+  --animate-marquee: marquee 40s linear infinite;
+  
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Move exatos 50% para um loop perfeito */
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Cinematic Fade-Through & Staggered Float-Up Energy */
+.reveal-hidden {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 800ms cubic-bezier(0.16, 1, 0.3, 1), transform 800ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pause-on-hover:hover {
+  animation-play-state: paused;
+}
