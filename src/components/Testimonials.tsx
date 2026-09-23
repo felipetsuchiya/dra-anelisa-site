@@ -50,26 +50,29 @@ export function Testimonials() {
   return (
     <section id="depoimentos" className="py-32 bg-surface overflow-hidden">
       <div className="max-w-6xl mx-auto px-8 mb-16">
-        <div className="flex flex-col md:flex-row justify-between items-end gap-8">
+        {/* CORREÇÃO: items-start no mobile e md:items-end no desktop */}
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
           <Reveal>
             <h2 className="font-serif text-4xl md:text-5xl text-ink tracking-tight">
               Depoimentos
             </h2>
           </Reveal>
           <Reveal delay={100}>
-            <div className="flex flex-col items-start md:items-end">
-              <div className="font-sans text-xs text-ink-muted uppercase tracking-widest flex flex-row space-x-5">
+            <div className="flex flex-col items-start md:items-end mt-4 md:mt-0">
+              <div className="font-sans text-xs text-ink-muted uppercase tracking-widest flex flex-row space-x-5 mb-1">
                 <span>5.0</span>
-                {[...Array(5)].map((_, i) => (
-                  <svg
-                    key={i}
-                    className="w-3.5 h-3.5 text-ink"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
-                  </svg>
-                ))}
+                <div className="flex gap-1 items-center">
+                  {[...Array(5)].map((_, i) => (
+                    <svg
+                      key={i}
+                      className="w-3.5 h-3.5 text-ink"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.828 1.48 8.279-7.416-3.967-7.417 3.967 1.481-8.279-6.064-5.828 8.332-1.151z" />
+                    </svg>
+                  ))}
+                </div>
               </div>
               <span className="font-sans text-xs text-ink-muted uppercase tracking-widest">
                 Avaliações de Pacientes
@@ -81,8 +84,7 @@ export function Testimonials() {
 
       {/* Ticker / Infinite Marquee */}
       <Reveal delay={200} className="w-full relative">
-        <div className="absolute top-0 left-0 w-24 md:w-48 h-full bg-linear-to-r from-surface to-transparent z-10 pointer-events-none"></div>
-        <div className="absolute top-0 right-0 w-24 md:w-48 h-full bg-linear-to-r from-surface to-transparent z-10 pointer-events-none"></div>
+        {/* As duas divs de gradiente branco que ficavam aqui foram removidas */}
 
         <div className="flex w-max animate-marquee pause-on-hover">
           {duplicatedReviews.map((review, index) => (

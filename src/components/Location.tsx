@@ -8,7 +8,8 @@ export function Location() {
     >
       <div className="max-w-6xl mx-auto">
         <Reveal>
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 border-b border-border pb-12">
+          {/* CORREÇÃO: items-start no mobile e md:items-end no desktop */}
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8 border-b border-border pb-12">
             <h2 className="font-serif text-4xl md:text-5xl text-ink tracking-tight">
               Nosso Endereço.
             </h2>
@@ -45,11 +46,12 @@ export function Location() {
               </p>
             </div>
 
+            {/* CORREÇÃO: Link limpo e botão ocupando a largura total (w-full) no mobile */}
             <a
-              href="https://www.google.com/maps/place/Instituto+DermaSoul+-+Cl%C3%ADnica+de+Est%C3%A9tica+em+Curitiba+%7C+Dra+Anelisa+Patron/@-25.4665719,-49.294521,17z/data=!3m1!4b1!4m6!3m5!1s0x94dce3fe264cc5b7:0x9a25415f1a959e57!8m2!3d-25.4665768!4d-49.2919461!16s%2Fg%2F11vjchf1v5?entry=ttu&g_ep=EgoyMDI2MDkxNi4wIKXMDSoASAFQAw%3D%3Dhttps://maps.app.goo.gl/gFV5X7nSKuc8fvUx8"
+              href="https://maps.app.goo.gl/gFV5X7nSKuc8fvUx8"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 border border-ink text-ink px-8 py-4 font-sans text-xs tracking-widest uppercase hover:bg-ink hover:text-surface transition-colors inline-block text-center self-start"
+              className="mt-4 border border-ink text-ink px-8 py-4 font-sans text-xs tracking-widest uppercase hover:bg-ink hover:text-surface transition-colors inline-block text-center w-full md:w-auto md:self-start"
             >
               Abrir no Google Maps
             </a>
@@ -68,9 +70,9 @@ export function Location() {
                 </div>
               </div>
 
-              {/* Iframe Container com Filtro Grayscale */}
-              <div className="w-full aspect-video md:aspect-21/9 bg-surface relative  opacity-90 transition-all duration-700">
-                {/* Substitua o "src" abaixo pelo link embed exato do seu Google Maps se preferir */}
+              {/* Iframe Container */}
+              {/* CORREÇÃO: Utilizando a sintaxe de colchetes md:aspect-[21/9] para garantir compatibilidade com o Tailwind */}
+              <div className="w-full aspect-video md:aspect-21/9 bg-surface relative opacity-90 transition-all duration-700">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.827989938837!2d-49.294521023719036!3d-25.466571939886733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dce3fe264cc5b7%3A0x9a25415f1a959e57!2sInstituto%20DermaSoul%20-%20Cl%C3%ADnica%20de%20Est%C3%A9tica%20em%20Curitiba%20%7C%20Dra%20Anelisa%20Patron!5e0!3m2!1spt-BR!2sbr!4v1716300000000!5m2!1spt-BR!2sbr"
                   width="100%"

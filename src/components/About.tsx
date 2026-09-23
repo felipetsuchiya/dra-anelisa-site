@@ -1,5 +1,5 @@
 import { Reveal } from "./Reveal";
-import Perfil from "../assets/perfil.jpg";
+import Perfil from "../assets/perfil.webp";
 
 export function About() {
   return (

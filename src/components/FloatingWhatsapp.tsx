@@ -1,4 +1,4 @@
-import { MessageCircle, Phone } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { whatsappLink } from "../common/whatsappmessage";
 
 export function FloatingWhatsApp() {
@@ -7,7 +7,7 @@ export function FloatingWhatsApp() {
       href={whatsappLink}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-8 right-8 z-50 flex items-center justify-center w-14 h-14 bg-brownish text-surface rounded-full shadow-[0_4px_24px_rgba(0,0,0,0.08)] hover:scale-105 hover:bg-[#222] transition-all duration-300 group cursor-pointer"
+      className="fixed bottom-8 right-8 z-50 hidden md:flex md:items-center md:justify-center w-14 h-14 bg-brownish text-surface rounded-full shadow-[0_4px_24px_rgba(0,0,0,0.08)] hover:scale-105 hover:bg-[#222] transition-all duration-300 group cursor-pointer "
       aria-label="Agendar via WhatsApp"
     >
       {/* Ícone Minimalista do WhatsApp */}

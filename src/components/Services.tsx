@@ -1,5 +1,5 @@
 import { Reveal } from "./Reveal";
-import servicesPic from "../assets/services.jpg";
+import servicesPic from "../assets/services.webp";
 
 const services = [
   {

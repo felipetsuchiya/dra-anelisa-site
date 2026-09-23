@@ -32,12 +32,11 @@ export function Footer() {
 
       <Reveal
         delay={300}
-        className="w-full max-w-5xl flex justify-between items-center border-t border-surface/10 pt-8 font-sans text-xs text-surface/50"
+        className="w-full max-w-5xl flex flex-col space-y-10 justify-between items-center border-t border-surface/10 pt-8 font-sans text-xs text-surface/50 sm:flex-row sm:space-y-0"
       >
         <div>
           &copy; {new Date().getFullYear()} Dra. Anelise Patron. CRBM 6 4304.
         </div>
-        <div>Desenvolvido por Opem Studio</div>
         <div className="flex gap-6">
           <a href="#" className="hover:text-surface transition-colors">
             Instagram
